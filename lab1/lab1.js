@@ -33,10 +33,20 @@ console.log(`Bạn đã tồn tại ${days} ngày`);
 fetch('https://65929f4fbb129707198fe18e.mockapi.io/tinhpv10/students')
     .then(function (respose){
         respose.json().then(function(data){
-            console.log(data);
+            let html= document.getElementById('pc05141_3');
+            let list_child = `<div><ul> `;
+            for(let{id, name, avatar} of data){
+                list_child += `
+                <li>${id}</li>
+                <li>${name}</li>
+                <li><img src="${avatar}"></li>
+                `;
+            };
+            list_child += `
+            </ul></div>`;
+            html.innerHTML = list_child;
         })
     });
-
 
 // bai 1.4 lab1
 fetch('https://65929f4fbb129707198fe18e.mockapi.io/tinhpv10/students')
@@ -44,7 +54,9 @@ fetch('https://65929f4fbb129707198fe18e.mockapi.io/tinhpv10/students')
         respose.json().then(function(data){
             let array = data;
             let html = document.getElementById('pc05141');
-            let child_html = `<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            let child_html = `
+            <div><h1>LAB 1.4</h1></div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
