@@ -1,0 +1,70 @@
+{
+    "user": [
+      {
+        "customer_id": 1,
+        "customer_name": "ngoduy",
+        "customer_email": "ngoduy@gmail.com",
+        "customer_phone_number": "0976415140",
+        "customer_address": "can tho"
+      }
+    ],
+    "category": [
+      {
+        "category_id": 1,
+        "category_name": "Tiểu thuyết"
+      },
+      {
+        "category_id": 2,
+        "category_name": "Truyện ngắn"
+      },
+      {
+        "category_id": 3,
+        "category_name": "Thơ"
+      },
+      {
+        "category_id": 4,
+        "category_name": "Kinh dị"
+      }
+    ],
+    "product": [
+      {
+        "product_id": 1,
+        "product_name": "Ông già và biển cả",
+        "product_price": 1000000,
+        "product_description": "Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời và hành trình gian khổ của con người để biến ước mơ thành hiện thực",
+        "product_image": "",
+        "cate_id": 1,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 2,
+        "product_name": "Life of Pi",
+        "product_price": 1000000,
+        "product_description": "Truyện tiểu thuyết",
+        "product_image": "",
+        "cate_id": 1,
+        "product_status": "đay là mô tả"
+      }
+    ],
+    "orders": [
+      {
+        "order_id": 1,
+        "customer_name": "ngoduy",
+        "customer_email": "ngoduy@gmail.com",
+        "customer_phone_number": "0976415140",
+        "customer_address": "can tho",
+        "order_date": "11/01/2024",
+        "order_status": "đang xử lý"
+      }
+    ],
+    "order_detail": [
+      {
+        "order_id": 1,
+        "product_id": 1,
+        "product_name": "Ông già và biển cả",
+        "total": 1000000,
+        "quantily": 1
+      }
+    ]  
+  }
+  
