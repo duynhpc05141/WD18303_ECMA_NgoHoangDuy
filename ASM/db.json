@@ -15,7 +15,7 @@
       },
       {
         "category_id": 2,
-        "category_name": "Truyện ngắn"
+        "category_name": "Sức khỏe"
       },
       {
         "category_id": 3,
@@ -32,7 +32,7 @@
         "product_name": "Ông già và biển cả",
         "product_price": 1000000,
         "product_description": "Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời và hành trình gian khổ của con người để biến ước mơ thành hiện thực",
-        "product_image": "",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.fm_audio_book/0/0/0/1922.jpg?v=1&w=480&h=700",
         "cate_id": 1,
         "product_status": "đay là mô tả"
       },
@@ -40,11 +40,66 @@
         "product_id": 2,
         "product_name": "Life of Pi",
         "product_price": 1000000,
-        "product_description": "Truyện tiểu thuyết",
-        "product_image": "",
+        "product_description": "Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,về tôn giáo và cả về bản chất con người",
+        "product_image": "https://canongate.co.uk/site/assets/files/372801/life_of_pi-ebook-cover-9781847674210.800x0.jpg",
         "cate_id": 1,
         "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 3,
+        "product_name": "Suối đàn",
+        "product_price": 1000000,
+        "product_description": "Truyện tiểu thuyết",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36059.jpg?v=2&w=480&h=700",
+        "cate_id": 1,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 4,
+        "product_name": "Hồng thầu",
+        "product_price": 1000000,
+        "product_description": "Truyện tiểu thuyết",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36062.jpg?v=1&w=480&h=700",
+        "cate_id": 1,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 5,
+        "product_name": "1000 câu hỏi tình dục của các cặp đôi",
+        "product_price": 120000,
+        "product_description": "Sức khỏe",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/47101.jpg?v=1&w=480&h=700",
+        "cate_id": 2,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 6,
+        "product_name": "Ngủ ngon theo phương pháp Stanford",
+        "product_price": 120000,
+        "product_description": "Sức khỏe",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/46990.jpg?v=1&w=480&h=700",
+        "cate_id": 2,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 7,
+        "product_name": "Ăn gì bổ não",
+        "product_price": 120000,
+        "product_description": "Sức khỏe",
+        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/41849.jpg?v=1&w=480&h=700",
+        "cate_id": 2,
+        "product_status": "đay là mô tả"
+      },
+      {
+        "product_id": 8,
+        "product_name": "Thơ Văn Hàn Mạc Tử",
+        "product_price": 120000,
+        "product_description": "Thơ",
+        "product_image": "https://www.netabooks.vn/Data/Sites/1/Product/5619/1.jpg",
+        "cate_id": 3,
+        "product_status": "đay là mô tả"
       }
+      
     ],
     "orders": [
       {
@@ -66,5 +121,5 @@
         "quantily": 1
       }
     ]  
-  }
+}
   
