@@ -7,21 +7,21 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+    <title>Dybook</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -41,47 +41,69 @@
         <div id="mobile-menu-wrap"></div>
     </div>
     <!-- Offcanvas Menu End -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="./public/img/DyBook2.png" alt="Logo" height="40px"></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Trang chủ</a></li>
-                            <li><a href="./pages/shop.html">Sản phẩm</a></li>
-                            <li><a href="./about.html">Giới thiệu</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="./public/img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>
-                        <a href="#" style="color: black;">Đăng nhập</a>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="./public/img/DyBook2.png" alt="Logo" height="40px"></a>
                 </div>
             </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+            <div class="col-lg-6 col-md-6">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./pages/shop.html">Sản phẩm</a></li>
+                        <li><a href="./pages/about.html">Giới thiệu</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="header__nav__option">
+                    <a href="#" class="search-switch"><img src="./public/img/icon/search.png" alt=""></a>
+                    <a href="./pages/shopping-cart.html"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>
+                    <a id="login" class="header__menu"></a>
+                    <script>
+                        function logout() {
+                            let logOut = sessionStorage.removeItem('name');
+                            window.location.href = './index.html';
+                        }
+                        let UserLogin = sessionStorage.getItem('name');
+                        let UserEmail = sessionStorage.getItem('email');
+                        let UserPhone = sessionStorage.getItem('phone');
+                        let UserAddress = sessionStorage.getItem('address');
+                        let UserId = sessionStorage.getItem('id');
+                        if (UserLogin) {
+                            let UserLogined = `<ul><li class="active "><a href="#">${UserLogin}</a>
+                                <ul class="dropdown ">
+                                    <li><a href="./pages/userInfor.html?id=${UserId} ">Thông tin</a></li>
+                                    <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+                                </ul>
+                            </li></ul>`;
+                            document.getElementById('login').innerHTML = UserLogined;
+                        } else {
+                            let loginLink = '<a href="./pages/login.html" style="color: black;">Đăng nhập</a>';
+                            document.getElementById('login').innerHTML = loginLink;
+                        }
+                    </script>
+                    <!-- <a href="./pages/login.html" style="color: black;">Đăng nhập</a> -->
+                </div>
+            </div>
         </div>
-    </header>
+        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+    </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__items set-bg" data-setbg="./public/img/banner/banner.jpg">
+            <div class="hero__items set-bg" data-setbg="./public/img/banner/banner3.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h2>Thế giới sách diệu kì</h2>
-                                <p>Mang đến một thế giới diệu kì qua từng trang sách </p>
-                                <a href="./shop.html" class="primary-btn">Mua ngay<span class="arrow_right"></span></a>
+                                <h2 style="color: white;">Thế giới sách diệu kì</h2>
+                                <p style="color: antiquewhite;">Mang đến một thế giới diệu kì qua từng trang sách </p>
+                                <a href="./pages/shop.html" class="primary-btn">Mua ngay<span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -92,9 +114,9 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h2>Thế giới sách diệu kì</h2>
-                                <p>Mang đến một thế giới diệu kì qua từng trang sách </p>
-                                <a href="./shop.html" class="primary-btn">Mua ngay<span class="arrow_right"></span></a>
+                                <h2 style="color: white;">Thế giới sách diệu kì</h2>
+                                <p style="color: antiquewhite;">Mang đến một thế giới diệu kì qua từng trang sách </p>
+                                <a href="./pages/shop.html" class="primary-btn">Mua ngay<span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -110,141 +132,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="filter__controls">
-                        <li class="active" data-filter="*">Sản phẩm bán chạy</li>
-                        <li data-filter=".new-arrivals">Sản phẩm mới</li>
+                        <li >Sản phẩm mới</li>
                     </ul>
                 </div>
             </div>
-            <div class="row product__filter" id="productLient">
-                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic" >
-                            <img src="./public/img/product/ongiavabienca.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Ông Già và biển cả</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời 
-                                và hành trình gian khổ của con người để biến ước mơ thành hiện thực</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/LifeofPi.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Life of Pi</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,
-                                 về tôn giáo và cả về bản chất con người</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/ongiavabienca.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Ông Già và biển cả</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời 
-                                và hành trình gian khổ của con người để biến ước mơ thành hiện thực</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/LifeofPi.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Life of Pi</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,
-                                 về tôn giáo và cả về bản chất con người</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/LifeofPi.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Life of Pi</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,
-                                 về tôn giáo và cả về bản chất con người</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/ongiavabienca.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Ông Già và biển cả</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời 
-                                và hành trình gian khổ của con người để biến ước mơ thành hiện thực</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/ongiavabienca.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Ông Già và biển cả</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời 
-                                và hành trình gian khổ của con người để biến ước mơ thành hiện thực</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                    <div class="product__item">
-                        <div class="product__item__pic " >
-                            <img src="./public/img/product/ongiavabienca.jpg" alt="">
-                            <span class="label">Mới</span>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Ông Già và biển cả</h6>
-                            <h5 style="color: red;">120.000đ</h5>
-                            <a href="#" class="add-cart">Thêm vào giỏ hàng</a>
-                            <p>Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời 
-                                và hành trình gian khổ của con người để biến ước mơ thành hiện thực</p>
-                        </div>
-                    </div>
-                </div> -->
-                
-            </div>
+            <div class="row product__filter" id="productLient"></div>
+            <div id="pagination" class="pagination" style="height: 50px;"></div>
         </div>
     </section>
     <!-- Product Section End -->
 
     <!-- Categories Section Begin -->
-    <section class="categories spad">
-        <div class="container">
+    <section class="categories spad" id="saleOff">
+
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="categories__hot__deal">
@@ -259,29 +160,11 @@
                     <div class="categories__deal__countdown">
                         <span>Giảm giá Trong tuần</span>
                         <h2>Ông Già và biển cả</h2>
-                        <div class="categories__deal__countdown__timer" id="countdown">
-                            <div class="cd-item">
-                                <span>3</span>
-                                <p>Ngày</p>
-                            </div>
-                            <div class="cd-item">
-                                <span>1</span>
-                                <p>Giờ</p>
-                            </div>
-                            <div class="cd-item">
-                                <span>50</span>
-                                <p>Phút</p>
-                            </div>
-                            <div class="cd-item">
-                                <span>18</span>
-                                <p>Giây</p>
-                            </div>
-                        </div>
                         <a href="./shop.html" class="primary-btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- Categories Section End -->
 
@@ -389,17 +272,18 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="/public/js/jquery-3.3.1.min.js"></script>
-    <script src="/public/js/bootstrap.min.js"></script>
-    <script src="/public/js/jquery.nice-select.min.js"></script>
-    <script src="/public/js/jquery.nicescroll.min.js"></script>
-    <script src="/public/js/jquery.magnific-popup.min.js"></script>
-    <script src="/public/js/jquery.countdown.min.js"></script>
-    <script src="/public/js/jquery.slicknav.js"></script>
-    <script src="/public/js/mixitup.min.js"></script>
-    <script src="/public/js/owl.carousel.min.js"></script>
-    <script src="/public/js/main.js"></script>
+    <script src="./public/js/jquery-3.3.1.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/jquery.nice-select.min.js"></script>
+    <script src="./public/js/jquery.nicescroll.min.js"></script>
+    <script src="./public/js/jquery.magnific-popup.min.js"></script>
+    <script src="./public/js/jquery.countdown.min.js"></script>
+    <script src="./public/js/jquery.slicknav.js"></script>
+    <script src="./public/js/mixitup.min.js"></script>
+    <script src="./public/js/owl.carousel.min.js"></script>
+    <script src="./public/js/main.js"></script>
     <script src="./public/js/productLinent.js"></script>
+    <script src="./public/js/saleOff.js"></script>
 </body>
 
 </html>

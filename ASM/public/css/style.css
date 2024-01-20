@@ -505,7 +505,7 @@ ol {
 
 .header__nav__option {
 	text-align: right;
-	padding: 30px 0;
+	padding: 0;
 }
 
 .header__nav__option a {
@@ -921,7 +921,7 @@ ol {
 }
 
 .filter__controls li {
-	color: #b7b7b7;
+	color: black;
 	font-size: 24px;
 	font-weight: 700;
 	list-style: none;
@@ -971,9 +971,7 @@ ol {
 	visibility: visible;
 }
 
-.product__item:hover .product__item__text h6 {
-	opacity: 0;
-}
+
 
 .product__item:hover .product__item__text .product__color__select {
 	opacity: 1;
@@ -1593,6 +1591,9 @@ ol {
 
 .product__details__pic__item {
 	position: relative;
+}
+.product__details__pic__item img {
+	box-shadow: 5px 5px 5px gray;
 }
 
 .product__details__pic__item a {

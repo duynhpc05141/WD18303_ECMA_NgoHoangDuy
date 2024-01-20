@@ -1,125 +1,226 @@
 {
-    "user": [
-      {
-        "customer_id": 1,
-        "customer_name": "ngoduy",
-        "customer_email": "ngoduy@gmail.com",
-        "customer_phone_number": "0976415140",
-        "customer_address": "can tho"
-      }
-    ],
-    "category": [
-      {
-        "category_id": 1,
-        "category_name": "Tiểu thuyết"
-      },
-      {
-        "category_id": 2,
-        "category_name": "Sức khỏe"
-      },
-      {
-        "category_id": 3,
-        "category_name": "Thơ"
-      },
-      {
-        "category_id": 4,
-        "category_name": "Kinh dị"
-      }
-    ],
-    "product": [
-      {
-        "product_id": 1,
-        "product_name": "Ông già và biển cả",
-        "product_price": 1000000,
-        "product_description": "Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời và hành trình gian khổ của con người để biến ước mơ thành hiện thực",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.fm_audio_book/0/0/0/1922.jpg?v=1&w=480&h=700",
-        "cate_id": 1,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 2,
-        "product_name": "Life of Pi",
-        "product_price": 1000000,
-        "product_description": "Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,về tôn giáo và cả về bản chất con người",
-        "product_image": "https://canongate.co.uk/site/assets/files/372801/life_of_pi-ebook-cover-9781847674210.800x0.jpg",
-        "cate_id": 1,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 3,
-        "product_name": "Suối đàn",
-        "product_price": 1000000,
-        "product_description": "Truyện tiểu thuyết",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36059.jpg?v=2&w=480&h=700",
-        "cate_id": 1,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 4,
-        "product_name": "Hồng thầu",
-        "product_price": 1000000,
-        "product_description": "Truyện tiểu thuyết",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36062.jpg?v=1&w=480&h=700",
-        "cate_id": 1,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 5,
-        "product_name": "1000 câu hỏi tình dục của các cặp đôi",
-        "product_price": 120000,
-        "product_description": "Sức khỏe",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/47101.jpg?v=1&w=480&h=700",
-        "cate_id": 2,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 6,
-        "product_name": "Ngủ ngon theo phương pháp Stanford",
-        "product_price": 120000,
-        "product_description": "Sức khỏe",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/46990.jpg?v=1&w=480&h=700",
-        "cate_id": 2,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 7,
-        "product_name": "Ăn gì bổ não",
-        "product_price": 120000,
-        "product_description": "Sức khỏe",
-        "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/41849.jpg?v=1&w=480&h=700",
-        "cate_id": 2,
-        "product_status": "đay là mô tả"
-      },
-      {
-        "product_id": 8,
-        "product_name": "Thơ Văn Hàn Mạc Tử",
-        "product_price": 120000,
-        "product_description": "Thơ",
-        "product_image": "https://www.netabooks.vn/Data/Sites/1/Product/5619/1.jpg",
-        "cate_id": 3,
-        "product_status": "đay là mô tả"
-      }
-      
-    ],
-    "orders": [
-      {
-        "order_id": 1,
-        "customer_name": "ngoduy",
-        "customer_email": "ngoduy@gmail.com",
-        "customer_phone_number": "0976415140",
-        "customer_address": "can tho",
-        "order_date": "11/01/2024",
-        "order_status": "đang xử lý"
-      }
-    ],
-    "order_detail": [
-      {
-        "order_id": 1,
-        "product_id": 1,
-        "product_name": "Ông già và biển cả",
-        "total": 1000000,
-        "quantily": 1
-      }
-    ]  
+  "user": [
+    {
+      "id": "1",
+      "customer_name": "ngoduy",
+      "customer_email": "ngoduy@gmail.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "can tho",
+      "password": "ngoduy",
+      "role_id": 2
+    },
+    {
+      "id": "2",
+      "customer_name": "kim Loi",
+      "customer_email": "loi@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "can tho",
+      "password": 12345,
+      "role_id": 1
+    },
+    {
+      "id": "6e4d",
+      "customer_name": "khang",
+      "customer_email": "khang@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    },
+    {
+      "id": "63c7",
+      "customer_name": "sang",
+      "customer_email": "sang@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    },
+    {
+      "id": "b168",
+      "customer_name": "khang2",
+      "customer_email": "khang2@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    },
+    {
+      "id": "5e8d",
+      "customer_name": "nghi",
+      "customer_email": "nghi@gmail.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    },
+    {
+      "id": "7a18",
+      "customer_name": "sang2",
+      "customer_email": "sang2@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    },
+    {
+      "id": "3eb2",
+      "customer_name": "khang223",
+      "customer_email": "khang223@email.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "category_name": "Tiểu thuyết"
+    },
+    {
+      "id": "2",
+      "category_name": "Sức khỏe"
+    },
+    {
+      "id": "3",
+      "category_name": "Thơ"
+    },
+    {
+      "id": "4",
+      "category_name": "Kinh dị"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "product_name": "Ông già và biển cả",
+      "product_price": 1000000,
+      "product_description": "Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời và hành trình gian khổ của con người để biến ước mơ thành hiện thực",
+      "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.fm_audio_book/0/0/0/1922.jpg?v=1&w=480&h=700",
+      "cate_id": 1,
+      "product_status": "Lão đã già, một mình một thuyền câu cá trên dòng Nhiệt lưu và đã tám mươi tư ngày qua lão không bắt được lấy một mống cá nào. Bốn mươi ngày đầu thằng bé đi với lão. Nhưng sau bốn mươi ngày không câu được cá, cha mẹ thằng bé bảo nó rằng rốt cuộc bây giờ ông lão đã hoàn toàn salao, cách diễn đạt tệ nhất của vận rủi, rồi buộc nó đi theo thuyền khác và ngay trong tuần lễ đầu tiên chiếc thuyền ấy đã câu được ba con cá lớn.Điều đó khiến thằng bé buồn khi hằng ngày thấy ông lão trở về với chiếc thuyền không, nó luôn xuống giúp lão mang khi thì cuộn dây, cái lao móc săn cá, khi thì cái sào hay tấm buồm quấn quanh cột. Tấm buồm được vá bằng bao bột, cuộn lại trông như một lá cờ bại trận triền miên. Ông lão gầy gò, giơ cả xương, gáy hằn sâu nhiều nếp nhăn. Những vệt nám vô hại trên làn da má của lão do bị ung thư bởi ánh mặt trời phản hồi trên mặt biển nhiệt đới. Những vệt ấy kéo dài xuống cả hai bên má, tay lão hằn những vết sẹo sâu bởi kéo những con cá lớn. Nhưng chẳng có vết nào trong số sẹo ấy còn mới cả. Chúng cũ kỹ như mấy vệt xói mòn trên sa mạc không cá. Mọi thứ trên cơ thể lão đều toát lên vẻ già nua, trừ đôi mắt; chúng có cùng màu với nước biển, vui vẻ và không hề thất bại",
+      "sale": 10,
+      "view": 100
+    },
+    {
+      "id": "2",
+      "product_name": "Life of Pi",
+      "product_price": 1000000,
+      "product_description": "Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,về tôn giáo và cả về bản chất con người",
+      "product_image": "https://canongate.co.uk/site/assets/files/372801/life_of_pi-ebook-cover-9781847674210.800x0.jpg",
+      "cate_id": 1,
+      "product_status": "đay là mô tả",
+      "sale": 10,
+      "view": 10
+    },
+    {
+      "id": "3",
+      "product_name": "Suối đàn",
+      "product_price": 1000000,
+      "product_description": "Lan Khai (24 tháng 6 năm 1906 – 1945). Trong lịch sử văn học hiện đại Việt Nam trước năm 1945, Lan Khai được xem là một cây bút sung mãn, một nhà văn đường rừng sáng giá.",
+      "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36059.jpg?v=2&w=480&h=700",
+      "cate_id": 1,
+      "product_status": "Trong những năm 30 xuất hiện một thể loại văn xuôi gọi là Truyện đường rừng, là thể loại văn xuôi về đề tài miền núi, dưới hình thức phiêu lưu, kì ẩn, ma và thần; nói nôm na đó là những truyện chỉ có ở rừng, thuộc về văn hoá rừng Việt Nam. Nhiều tác giả văn xuôi thời kỳ này đã thử sức với thể loại mới mẻ ấy, tạo được dư luận rộng rãi và sự hưởng ứng nhiệt tình của bạn đọc ba miền Bắc, Trung, Nam như Thế Lữ, Lưu Trọng Lư, Nhất Linh, Hồ Dzếnh, Vũ Bằng, Lan Khai, Lý Văn Sâm…. Tuy nhiên cho đến nay, nhắc đến Truyện đường rừng người ta vẫn nhắc đến hai tên tuổi lớn là Lan Khai và Thế Lữ.",
+      "sale": 10,
+      "view": 20
+    },
+    {
+      "id": "4",
+      "product_name": "Hồng thầu",
+      "product_price": 1000000,
+      "product_description": "Truyện tiểu thuyết",
+      "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/36062.jpg?v=1&w=480&h=700",
+      "cate_id": 1,
+      "product_status": "đay là mô tả",
+      "sale": 10,
+      "view": 26
+    },
+    {
+      "id": "5",
+      "product_name": "Cơ Thể Tự Chữa Lành - Giải Cứu Não",
+      "product_price": 120000,
+      "product_description": "Bộ não là cơ quan chúng ta ít hiểu biết nhất, nhưng lại ảnh hưởng lớn tới trãi nghiệm cuộc sống của chúng ta",
+      "product_image": "https://bookbuy.vn/Res/Images/Product/co-the-tu-chua-lanh-giai-cuu-nao_125997_1.jpg",
+      "cate_id": 2,
+      "product_status": "Cuốn sách đi sâu vào các vấn đề liên quan đến não bộ - từ các loại virus, vi khuẩn gây hại cho não, tới kim loại nặng độc hại, dược phẩm lưu cữu, các chất gây ô nhiễm, thậm chí cả phóng xạ/bức xạ hiện rất phổ biến trong cuộc sống hiện đại. Không chỉ thế, tác giả còn căn cứ vào các vấn đề nêu trên để lý giải nhiều vấn đề, triệu chứng và bệnh trạng tâm thần hiện đang khiến nhiều y bác sĩ bối rối và hàng ngàn người bệnh khốn khổ.",
+      "sale": 10,
+      "view": 98
+    },
+    {
+      "id": "6",
+      "product_name": "Ngủ ngon theo phương pháp Stanford",
+      "product_price": 120000,
+      "product_description": "Sức khỏe",
+      "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/46990.jpg?v=1&w=480&h=700",
+      "cate_id": 2,
+      "product_status": "đay là mô tả",
+      "sale": 10,
+      "view": 10
+    },
+    {
+      "id": "7",
+      "product_name": "Ăn gì bổ não",
+      "product_price": 120000,
+      "product_description": "Sức khỏe",
+      "product_image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/1/41849.jpg?v=1&w=480&h=700",
+      "cate_id": 2,
+      "product_status": "đay là mô tả",
+      "sale": 10,
+      "view": 55
+    },
+    {
+      "id": "8",
+      "product_name": "Thơ Văn Hàn Mạc Tử",
+      "product_price": 120000,
+      "product_description": "Thơ",
+      "product_image": "https://www.netabooks.vn/Data/Sites/1/Product/5619/1.jpg",
+      "cate_id": 3,
+      "product_status": "đay là mô tả",
+      "sale": 10,
+      "view": 10
+    },
+    {
+      "id": "9",
+      "product_name": "Thơ Xuân Diệu",
+      "product_price": 90000,
+      "product_description": "Xuân Diệu là thành viên của Tự Lực Văn Đoàn và cũng đã là một trong những chủ soái của phong trào “Thơ Mới”.",
+      "product_image": "https://cdn0.fahasa.com/media/catalog/product/h/h/hh_bia_tho-xuan-dieu_b1.jpg",
+      "cate_id": 3,
+      "product_status": "Xuân Diệu tham gia ban chấp hành, nhiều năm là ủy viên thường vụ Hội Nhà văn Việt Nam. Từ đó, Xuân Diệu trở thành một trong những nhà thơ hàng đầu ca ngợi Cách mạng, một “dòng thơ công dân”. Bút pháp của ông chuyển biến phong phú về giọng vẻ: có giọng trầm hùng, tráng ca, có giọng chính luận, giọng thơ tự sự trữ tình. Tiêu biểu là: Ngọn quốc kỳ (1945), Một khối hồng (1964), Thanh ca (1982), Tuyển tập Xuân Diệu (1983).",
+      "sale": 10,
+      "view": 10
+    },
+    {
+      "id": "10",
+      "product_name": "Thơ Xuân Diệu",
+      "product_price": 90000,
+      "product_description": "Xuân Diệu là thành viên của Tự Lực Văn Đoàn và cũng đã là một trong những chủ soái của phong trào “Thơ Mới”.",
+      "product_image": "https://cdn0.fahasa.com/media/catalog/product/h/h/hh_bia_tho-xuan-dieu_b1.jpg",
+      "cate_id": 3,
+      "product_status": "Xuân Diệu tham gia ban chấp hành, nhiều năm là ủy viên thường vụ Hội Nhà văn Việt Nam. Từ đó, Xuân Diệu trở thành một trong những nhà thơ hàng đầu ca ngợi Cách mạng, một “dòng thơ công dân”. Bút pháp của ông chuyển biến phong phú về giọng vẻ: có giọng trầm hùng, tráng ca, có giọng chính luận, giọng thơ tự sự trữ tình. Tiêu biểu là: Ngọn quốc kỳ (1945), Một khối hồng (1964), Thanh ca (1982), Tuyển tập Xuân Diệu (1983).",
+      "sale": 10,
+      "view": 10
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "customer_name": "ngoduy",
+      "customer_email": "ngoduy@gmail.com",
+      "customer_phone_number": "0976415140",
+      "customer_address": "can tho",
+      "order_date": "11/01/2024",
+      "order_status": "đang xử lý"
+    }
+  ],
+  "order_detail": [
+    {
+      "id": "1",
+      "product_id": 1,
+      "product_name": "Ông già và biển cả",
+      "total": 1000000,
+      "quantily": 1
+    }
+  ]
 }
-  

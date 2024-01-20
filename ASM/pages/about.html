@@ -14,14 +14,14 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -33,100 +33,60 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
-        </div>
         <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
+            <a href="#" class="search-switch"><img src="../public/img/icon/search.png" alt="" /></a>
+            <a href="#"><img src="../public/img/icon/cart.png" alt="" /> <span>0</span></a>
+            <a href="#" style="color: black;">Đăng nhập</a>
         </div>
         <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
-        </div>
     </div>
     <!-- Offcanvas Menu End -->
-
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-7">
-                        <div class="header__top__left">
-                            <p>Free shipping, 30-day return or refund guarantee.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-5">
-                        <div class="header__top__right">
-                            <div class="header__top__links">
-                                <a href="#">Sign in</a>
-                                <a href="#">FAQs</a>
-                            </div>
-                            <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="header__logo">
+                    <a href="../index.html"><img src="../public/img/DyBook2.png" alt="Logo" height="40px"></a>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
+            <div class="col-lg-6 col-md-6">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="../index.html">Trang chủ</a></li>
+                        <li> <a href="./shop.html" >Sản phẩm</a></li>
+                        <li><a href="./about.html">Giới thiệu</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="header__nav__option">
+                    <a href="#" class="search-switch"><img src="../public/img/icon/search.png" alt=""></a>
+                    <a href="#"><img src="../public/img/icon/cart.png" alt=""> <span>0</span></a>
+                    <a id="login" class="header__menu"></a>
+                    <script>
+                        function logout() {
+                            let logOut = sessionStorage.removeItem('name');
+                            window.location.href = '../index.html';
+                        }
+                        let UserLogin = sessionStorage.getItem('name');
+                        
+                        if (UserLogin) {
+                            let UserLogined = `<ul><li class="active "><a href="#">${UserLogin}</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about.html">About Us</a></li>
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                    <li><a href="#" onclick="logout()">Đăng xuất</a></li>
                                 </ul>
-                            </li>
-                            <li class="active"><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                        <div class="price">$0.00</div>
-                    </div>
+                            </li></ul>`;
+                            document.getElementById('login').innerHTML = UserLogined;
+                        } else {
+                            let loginLink = '<a href="../pages/login.html" style="color: black;">Đăng nhập</a>';
+                            document.getElementById('login').innerHTML = loginLink;
+                        }
+                    </script>
+                    <!-- <a href="./pages/login.html" style="color: black;">Đăng nhập</a> -->
                 </div>
             </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
-    </header>
+        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+    </div>
     <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
@@ -135,10 +95,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>About Us</h4>
+                        <h4>Dybook là gì</h4>
                         <div class="breadcrumb__links">
-                            <a href="./index.html">Home</a>
-                            <span>About Us</span>
+                            <a href="../index.html">Trang chủ</a>
+                            <span>Về chúng tôi</span>
                         </div>
                     </div>
                 </div>
@@ -153,30 +113,30 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="about__pic">
-                        <img src="img/about/about-us.jpg" alt="">
+                        <img src="../public/img/banner/Books.jpg" alt="" height="600px">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="about__item">
-                        <h4>Who We Are ?</h4>
-                        <p>Contextual advertising programs sometimes have strict policies that need to be adhered too.
-                        Let’s take Google as an example.</p>
+                        <h4>Dybook là ai ?</h4>
+                        <p>Dybook là một trang web bán sách trực tuyến với một bộ sưu tập đa dạng các loại sách từ văn học, khoa học,
+                             kinh doanh đến sách thiếu nhi và sách giáo khoa. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="about__item">
-                        <h4>Who We Do ?</h4>
-                        <p>In this digital generation where information can be easily obtained within seconds, business
-                        cards still have retained their importance.</p>
+                        <h4>Dybook làm được gì ?</h4>
+                        <p>Dybook cung cấp cho người đọc trải nghiệm mua sắm sách trực tuyến thuận tiện và đáng tin cậy. Bạn có thể tìm thấy những cuốn sách mới nhất, 
+                            các tác phẩm kinh điển và cả những tựa sách bán chạy nhất trên Dybook.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="about__item">
-                        <h4>Why Choose Us</h4>
-                        <p>A two or three storey house is the ideal way to maximise the piece of earth on which our home
-                        sits, but for older or infirm people.</p>
+                        <h4>Tại sao phải chọn Dybook</h4>
+                        <p>Dybook cũng cung cấp các dịch vụ giao hàng nhanh chóng và hỗ trợ khách hàng nhiệt tình, 
+                            giúp bạn có được những cuốn sách yêu thích một cách dễ dàng.</p>
                     </div>
                 </div>
             </div>
@@ -191,22 +151,12 @@
                 <div class="col-lg-6 p-0">
                     <div class="testimonial__text">
                         <span class="icon_quotations"></span>
-                        <p>“Going out after work? Take your butane curling iron with you to the office, heat it up,
-                            style your hair before you leave the office and you won’t have to make a trip back home.”
+                        <p>“Sách không chỉ mang lại kiến thức mà còn làm cho tâm hồn ta bay bổng và đắm chìm trong những câu chuyện đầy sinh động”
                         </p>
-                        <div class="testimonial__author">
-                            <div class="testimonial__author__pic">
-                                <img src="img/about/testimonial-author.jpg" alt="">
-                            </div>
-                            <div class="testimonial__author__text">
-                                <h5>Augusta Schultz</h5>
-                                <p>Fashion Design</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
-                    <div class="testimonial__pic set-bg" data-setbg="img/about/testimonial-pic.jpg"></div>
+                    <div class="testimonial__pic set-bg" data-setbg="../public/img/banner/books2.jpg"></div>
                 </div>
             </div>
         </div>
@@ -420,16 +370,16 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../public/js/jquery-3.3.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/jquery.nice-select.min.js"></script>
+    <script src="../public/js/jquery.nicescroll.min.js"></script>
+    <script src="../public/js/jquery.magnific-popup.min.js"></script>
+    <script src="../public/js/jquery.countdown.min.js"></script>
+    <script src="../public/js/jquery.slicknav.js"></script>
+    <script src="../public/js/mixitup.min.js"></script>
+    <script src="../public/js/owl.carousel.min.js"></script>
+    <script src="../public/js/main.js"></script>
 </body>
 
 </html>
