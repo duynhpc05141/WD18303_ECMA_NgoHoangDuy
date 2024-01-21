@@ -1,13 +1,13 @@
 {
   "user": [
     {
-      "id": "1",
-      "customer_name": "ngoduy",
-      "customer_email": "ngoduy@gmail.com",
+      "customer_name": "sang222",
+      "customer_email": "sang222@email.com",
       "customer_phone_number": "0976415140",
-      "customer_address": "can tho",
-      "password": "ngoduy",
-      "role_id": 2
+      "customer_address": "cần thơ",
+      "password": "12345",
+      "role_id": "2",
+      "id": "1"
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "customer_phone_number": "0976415140",
       "customer_address": "can tho",
       "password": 12345,
-      "role_id": 1
+      "role_id": "1"
     },
     {
       "id": "6e4d",
