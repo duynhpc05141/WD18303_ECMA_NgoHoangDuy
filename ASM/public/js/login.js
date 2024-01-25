@@ -112,16 +112,8 @@ btnLogin.addEventListener('click', (e) => {
                 });
                 if (userFound) {
                     let id = userFound.id;
-                    let name = userFound.customer_name;
-                    let phone = userFound.customer_phone_number;
-                    let address = userFound.customer_address;
                     let role_id = userFound.role_id;
                     sessionStorage.setItem('role_id', role_id);
-                    sessionStorage.setItem('name', name);
-                    sessionStorage.setItem('email', emailUser);
-                    sessionStorage.setItem('pass', passUser);
-                    sessionStorage.setItem('phone', phone);
-                    sessionStorage.setItem('address', address);
                     sessionStorage.setItem('id', id);
                     window.location.href = '../index.html';
                 } else {
@@ -136,5 +128,6 @@ btnLogin.addEventListener('click', (e) => {
         alert('Vui lòng điền đầy đủ thông tin để đăng nhập.');
     }
 });
+
 
 

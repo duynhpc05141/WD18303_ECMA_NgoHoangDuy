@@ -10,7 +10,7 @@ let urlParams = new URLSearchParams(window.location.search);
 		<div class="wrap-login100-form-btn my-xl-2 col-lg-6">
 	<div class="login100-form-bgbtn"></div>
 	<button class="login100-form-btn">
-		<a href="#" style="color: black;">Quản trị</a>
+		<a href="../../admin/login.html" style="color: black;">Quản trị</a>
 	</button>
 	</div>`;
 	let role2 = `<div class="wrap-login100-form-btn my-xl-2 col-lg-6">
@@ -45,7 +45,6 @@ fetch(API_USER_INFOR)
 			Số điện thoại: ${data.customer_phone_number}<br>
 			Địa chỉ: ${data.customer_address}</p>
 		</div>
-
 		<div class="m-4" id="roleId">
 			${roleId}
 		</div>`;

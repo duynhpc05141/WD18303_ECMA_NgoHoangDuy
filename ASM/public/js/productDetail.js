@@ -23,7 +23,6 @@ fetch(API_PRODUCT_DETAIL)
     }
     let price = data.product_price;
     let formattedPrice = price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-        console.log(data);
         let productDetail = "";
         productDetail += `<div class="product__details__pic">
                 <div class="container">
@@ -53,7 +52,7 @@ fetch(API_PRODUCT_DETAIL)
                                             <input type="number" value="1" min="0">
                                         </div>
                                     </div>
-                                    <a href="#" class="primary-btn">Thêm vào giỏ hàng</a>
+                                    <a href="#" onclick="addToCartClicked(${data.id})" class="primary-btn" id="btnCart">Thêm vào giỏ hàng</a>
                                 </div>
                                 <div class="product__details__last__option">
                                     <ul>
@@ -92,3 +91,22 @@ fetch(API_PRODUCT_DETAIL)
         console.log("error");
   });
 
+
+
+  // Hàm được gọi khi người dùng nhấn nút "Thêm vào giỏ hàng"
+function addToCartClicked(id) {
+    let idSp = id;
+    const API_PRODUCT_CART = 'http://localhost:3000/product/' + idSp;
+    fetch(API_PRODUCT_CART)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        localStorage.setItem('idProduct', data.id);
+        window.location.href = '../../pages/shopping-cart.html';
+        let product = { id: idProduct};
+        addToCart(product);
+    });
+}
+  
+  

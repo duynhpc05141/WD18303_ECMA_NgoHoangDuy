@@ -61,31 +61,43 @@
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="./public/img/icon/search.png" alt=""></a>
                     <a href="./pages/shopping-cart.html"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>
-                    <a id="login" class="header__menu"></a>
-                    <script>
+                    <a id="loginForm" class="header__menu"></a>
+                    <!-- <script>
                         function logout() {
-                            let logOut = sessionStorage.removeItem('name');
+                            sessionStorage.removeItem('name');
                             window.location.href = './index.html';
                         }
-                        let UserLogin = sessionStorage.getItem('name');
-                        let UserEmail = sessionStorage.getItem('email');
-                        let UserPhone = sessionStorage.getItem('phone');
-                        let UserAddress = sessionStorage.getItem('address');
-                        let UserId = sessionStorage.getItem('id');
-                        if (UserLogin) {
-                            let UserLogined = `<ul><li class="active "><a href="#">${UserLogin}</a>
-                                <ul class="dropdown ">
-                                    <li><a href="./pages/userInfor.html?id=${UserId} ">Thông tin</a></li>
-                                    <li><a href="#" onclick="logout()">Đăng xuất</a></li>
-                                </ul>
-                            </li></ul>`;
-                            document.getElementById('login').innerHTML = UserLogined;
-                        } else {
-                            let loginLink = '<a href="./pages/login.html" style="color: black;">Đăng nhập</a>';
-                            document.getElementById('login').innerHTML = loginLink;
+                    
+                        let userId = sessionStorage.getItem('id');
+                        if (userId) {
+                            const API_USER_LOGIN = 'http://localhost:3000/user/' + userId;
+                            fetch(API_USER_LOGIN)
+                                .then(function(response) {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                })
+                                .then(function(data) {
+                                    let html = document.getElementById('loginForm');
+                                    let loginContent = '';
+                                    if (userId) {
+                                        loginContent = `<ul><li class="active "><a href="#">${data.customer_name}</a>
+                                            <ul class="dropdown ">
+                                                <li><a href="./pages/userInfor.html?id=${data.id}">Thông tin</a></li>
+                                                <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+                                            </ul>
+                                        </li></ul>`;
+                                    } else {
+                                        loginContent = '<a href="./pages/login.html" style="color: black;">Đăng nhập</a>';
+                                    }
+                                    html.innerHTML = loginContent;
+                                })
+                                .catch(function(error) {
+                                    console.log('Fetch error:', error);
+                                });
                         }
-                    </script>
-                    <!-- <a href="./pages/login.html" style="color: black;">Đăng nhập</a> -->
+                    </script> -->
                 </div>
             </div>
         </div>
@@ -284,6 +296,7 @@
     <script src="./public/js/main.js"></script>
     <script src="./public/js/productLinent.js"></script>
     <script src="./public/js/saleOff.js"></script>
+    <script src="./public/js/loginUser.js"></script>
 </body>
 
 </html>

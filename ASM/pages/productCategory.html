@@ -7,7 +7,7 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+    <title>Dybook</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="../public/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="../public/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../public/css/style.css" type="text/css">
-    <script src="../public/js/productDetail.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,7 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="../public/img/icon/search.png" alt="" /></a>
-            <a href="../pages/shopping-cart.html"><img src="../public/img/icon/cart.png" alt="" /> <span>0</span></a>
+            <a href="#"><img src="../public/img/icon/cart.png" alt="" /> <span>0</span></a>
             <a href="#" style="color: black;">Đăng nhập</a>
         </div>
         <div id="mobile-menu-wrap"></div>
@@ -61,7 +60,7 @@
             <div class="col-lg-3 col-md-3">
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="../public/img/icon/search.png" alt=""></a>
-                    <a href="../pages/shopping-cart.html"><img src="../public/img/icon/cart.png" alt=""> <span>0</span></a>
+                    <a href="#"><img src="../public/img/icon/cart.png" alt=""> <span>0</span></a>
                     <a id="login" class="header__menu"></a>
                     <script>
                         function logout() {
@@ -89,9 +88,77 @@
         <div class="canvas__open"><i class="fa fa-bars"></i></div>
     </div>
     <!-- Header Section End -->
-    <div ></div>
-    <section class="shop-details" id="productDetail"></section>
-    <!-- Shop Details Section Begin -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>Shop</h4>
+                        <div class="breadcrumb__links">
+                            <a href="../index.html">Trang chủ</a>
+                            <span>Sản phẩm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Shop Section Begin -->
+    <section class="shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="shop__sidebar">
+                        <div class="shop__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Tìm kiếm...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>
+                        <div class="shop__sidebar__accordion">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-heading">
+                                        <a data-toggle="collapse" data-target="#collapseOne">Danh mục</a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="shop__sidebar__categories">
+                                                <ul class="nice-scroll" >
+                                                    <div id="categoryList"></div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row " id="productCate">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product__pagination">
+                                <a class="active" href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <span>...</span>
+                                <a href="#">21</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Section End -->
+
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -178,6 +245,8 @@
     <script src="../public/js/mixitup.min.js"></script>
     <script src="../public/js/owl.carousel.min.js"></script>
     <script src="../public/js/main.js"></script>
+    <script src="../public/js/category.js"></script>
+    <script src="../public/js/productCate.js"></script>
     <script src="../public/js/shopingCart.js"></script>
 </body>
 
