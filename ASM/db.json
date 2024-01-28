@@ -102,7 +102,7 @@
   ],
   "product": [
     {
-      "id": "1",
+      "id": "0",
       "product_name": "Ông già và biển cả",
       "product_price": 1000000,
       "product_description": "Hình ảnh ông lão đánh cá đơn độc, dũng cảm săn đuổi con cá lớn nhất đời và hành trình gian khổ của con người để biến ước mơ thành hiện thực",
@@ -113,7 +113,7 @@
       "view": 100
     },
     {
-      "id": "2",
+      "id": "1",
       "product_name": "Life of Pi",
       "product_price": 1000000,
       "product_description": "Cuộc đời của Pi là một câu chuyện hoàn hảo. Những hình ảnh ẩn dụ dày đặc xuyên suốt,về tôn giáo và cả về bản chất con người",
@@ -124,7 +124,7 @@
       "view": 10
     },
     {
-      "id": "3",
+      "id": "2",
       "product_name": "Suối đàn",
       "product_price": 1000000,
       "product_description": "Lan Khai (24 tháng 6 năm 1906 – 1945). Trong lịch sử văn học hiện đại Việt Nam trước năm 1945, Lan Khai được xem là một cây bút sung mãn, một nhà văn đường rừng sáng giá.",
@@ -135,7 +135,7 @@
       "view": 20
     },
     {
-      "id": "4",
+      "id": "3",
       "product_name": "Hồng thầu",
       "product_price": 1000000,
       "product_description": "Truyện tiểu thuyết",
@@ -146,7 +146,7 @@
       "view": 26
     },
     {
-      "id": "5",
+      "id": "4",
       "product_name": "Cơ Thể Tự Chữa Lành - Giải Cứu Não",
       "product_price": 120000,
       "product_description": "Bộ não là cơ quan chúng ta ít hiểu biết nhất, nhưng lại ảnh hưởng lớn tới trãi nghiệm cuộc sống của chúng ta",
@@ -157,7 +157,7 @@
       "view": 98
     },
     {
-      "id": "6",
+      "id": "5",
       "product_name": "Ngủ ngon theo phương pháp Stanford",
       "product_price": 120000,
       "product_description": "Sức khỏe",
@@ -168,7 +168,7 @@
       "view": 10
     },
     {
-      "id": "7",
+      "id": "6",
       "product_name": "Ăn gì bổ não",
       "product_price": 120000,
       "product_description": "Sức khỏe",
@@ -179,7 +179,7 @@
       "view": 55
     },
     {
-      "id": "8",
+      "id": "7",
       "product_name": "Thơ Văn Hàn Mạc Tử",
       "product_price": 120000,
       "product_description": "Thơ",
@@ -190,7 +190,7 @@
       "view": 10
     },
     {
-      "id": "9",
+      "id": "8",
       "product_name": "Thơ Xuân Diệu",
       "product_price": 90000,
       "product_description": "Xuân Diệu là thành viên của Tự Lực Văn Đoàn và cũng đã là một trong những chủ soái của phong trào “Thơ Mới”.",
@@ -201,7 +201,7 @@
       "view": 10
     },
     {
-      "id": "10",
+      "id": "9",
       "product_name": "Thơ Xuân Diệu",
       "product_price": 90000,
       "product_description": "Xuân Diệu là thành viên của Tự Lực Văn Đoàn và cũng đã là một trong những chủ soái của phong trào “Thơ Mới”.",
