@@ -54,25 +54,26 @@ class Clock {
   }
   
   let clock = new Clock({ template: 'h:m:s' });
-  clock.start();
+  // clock.start();
 // lab5 bai 4
 var persons = {
-    _firstName: "ngo",
-    _lastName: "duy",
-    set lastName(lastName) {
-      this._lastName = lastName;
-    },
-    set firstName(firstName) {
-      this._firstName = firstName;
-    },
-    get fullName() {
-      return this._firstName + " " + this._lastName;
-    }
-  };
-  
-  persons.lastName = 'Newton';
-  persons.firstName = 'Isaac';
-  console.log(persons.fullName()); 
+  _firstName: "ngo",
+  _lastName: "duy",
+  set lastName(lastName) {
+    this._lastName = lastName;
+  },
+  set firstName(firstName) {
+    this._firstName = firstName;
+  },
+  get fullName() {
+    return this._firstName + " " + this._lastName;
+  }
+};
+
+persons.lastName = 'duy';
+persons.firstName = 'ngo';
+console.log(persons.fullName);
+
   
 
 // lab5 bai 5
@@ -106,103 +107,6 @@ var persons = {
 // let user = new Comments(API_URL);
 // user.getAll();
 // user.getOne(5);
-class APICaller {
-  constructor(baseURL) {
-    this.baseURL = baseURL;
-  }
-
-  get(id = "") {
-    const API = this.baseURL + this.endpoint;
-    fetch(API + id || "")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log('error');
-      });
-  }
-
-  post(data) {
-    const API = this.baseURL + this.endpoint;
-    fetch(API, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log('error');
-      });
-  }
-
-  put(id, data) {
-    const API = this.baseURL + this.endpoint;
-    fetch(API + id, {
-      method: 'PUT',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log('error');
-      });
-  }
-
-  delete(id) {
-    const API = this.baseURL + this.endpoint;
-    fetch(API + id, {
-      method: 'DELETE',
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log('error');
-      });
-  }
-}
-
-class Comments extends APICaller {
-  constructor(baseURL) {
-    super(baseURL);
-    this.endpoint = "comments/";
-  }
-
-  getAll() {
-    return this.get();
-  }
-
-  getOne(id) {
-    return this.get(id);
-  }
-
-  addComment(data) {
-    return this.post(data);
-  }
-
-  updateComment(id, data) {
-    return this.put(id, data);
-  }
-
-  removeComment(id) {
-    return this.delete(id);
-  }
-}
-
-const API_URL = 'https://jsonplaceholder.typicode.com/';
-let user = new Comments(API_URL);
+import { user } from './app2.js';
+user.getOne(6);
 user.getAll();
-user.getOne(5);
-
