@@ -21,14 +21,6 @@ import {
     update as dbUpdate,
 } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-// const firebaseConfig = {
-// apiKey: "AIzaSyAqgCaUUa-9lHJt5gXEbFIp-ymP_UpiH7M",
-// authDomain: "dybook-d3e8f.firebaseapp.com",
-// projectId: "dybook-d3e8f",
-// storageBucket: "dybook-d3e8f.appspot.com",
-// messagingSenderId: "198638692071",
-// appId: "1:198638692071:web:f0c1e660a03dc76b136442"
-// };
 const app = initializeApp(firebaseConfig);
 const db = getDb(app);
 dbGet(dbChild(dbRef(db), `product/`))
