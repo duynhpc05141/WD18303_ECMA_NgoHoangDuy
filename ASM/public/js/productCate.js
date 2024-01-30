@@ -33,13 +33,13 @@ let urlParams = new URLSearchParams(window.location.search);
 let cate_id = urlParams.get('id');
 const app = initializeApp(firebaseConfig);
 const db = getDb(app);
-dbGet(dbChild(dbRef(db), `product/`))
+dbGet(dbChild(dbRef(db), `product`))
     .then((snapshot) => {
         const product = snapshot.val();
         if (product) {
             let html = document.getElementById('productCate');
             let productlist = "";
-          product.map((item) => {
+            product.map((item) => {
             let maxSentences =15; // Số câu tối đa muốn hiển thị
             let content = item.product_description; // Nội dung của bài viết
             // Tách nội dung thành các câu

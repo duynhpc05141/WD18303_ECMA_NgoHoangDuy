@@ -24,52 +24,36 @@ const db = getDb(app);
 // Lấy tham chiếu đến các trường trong biểu mẫu
 let urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get('id');
-let nameInput = document.getElementById('name');
-let emailInput = document.getElementById('email');
-let phoneInput = document.getElementById('phone');
-let addressInput = document.getElementById('address');
-let roleInput = document.getElementById('role');
+console.log(id);
+let nameInput = document.getElementById('nameCate');
 // Tải thông tin người dùng từ cơ sở dữ liệu Firebase và điền vào các trường tương ứng trong biểu mẫu
 if (id) {
-    let userRef = dbRef(db, 'user/' + id);
-    dbGet(userRef).then((snapshot) => {
+    let cateRef = dbRef(db, 'category/' + id);
+    dbGet(cateRef).then((snapshot) => {
       if (snapshot.exists()) {
-        let userData = snapshot.val();
-        nameInput.value = userData.customer_name;
-        emailInput.value = userData.customer_email;
-        phoneInput.value = userData.customer_phone_number;
-        addressInput.value = userData.customer_address;
-        roleInput.value = userData.role_id;
+        let cateData = snapshot.val();
+        nameInput.value = cateData.category_name;
       } else {
-        console.log("Không tìm thấy thông tin người dùng");
+        console.log("Không tìm thấy thông tin danh mục");
       }
     })
   
     // Thêm sự kiện click cho nút cập nhật
-    let btnUpUser = document.getElementById('btnUpUser');
-    btnUpUser.addEventListener('click', (e) => {
+    let btnUpCate = document.getElementById('btnUpCate');
+    btnUpCate.addEventListener('click', (e) => {
       e.preventDefault();
       // Lấy giá trị từ các trường trong biểu mẫu
       let name = nameInput.value;
-      let email = emailInput.value;
-      let phone = phoneInput.value;
-      let address = addressInput.value;
-      let role = roleInput.value;
-  
       // Kiểm tra và cập nhật thông tin người dùng trong cơ sở dữ liệu Firebase
-      if (!name || !email || !phone || !address || !role) {
+      if (!name) {
         alert('Vui lòng điền đầy đủ thông tin');
         return;
       }
-      let newUser = {
-        customer_name: name,
-        customer_email: email,
-        customer_phone_number: phone,
-        customer_address: address,
-        role_id: role
+      let newCate = {
+        category_name: name,
       }
-      dbUpdate(dbRef(db, 'user/' + id), newUser);
+      dbUpdate(dbRef(db, 'category/' + id), newCate);
       alert('Cập nhật thành công');
-      window.location.href = '../../../admin/pages/user/userAdmin.html';
+      window.location.href = '../../../admin/pages/category/cateAdmin.html';
     });
   }
