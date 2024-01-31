@@ -63,42 +63,6 @@
                     <a href="#" class="search-switch"><img src="./public/img/icon/search.png" alt=""></a>
                     <a href="./pages/shopping-cart.html"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>
                     <a id="loginForm" class="header__menu"></a>
-                    <!-- <script>
-                        function logout() {
-                            sessionStorage.removeItem('name');
-                            window.location.href = './index.html';
-                        }
-                    
-                        let userId = sessionStorage.getItem('id');
-                        if (userId) {
-                            const API_USER_LOGIN = 'http://localhost:3000/user/' + userId;
-                            fetch(API_USER_LOGIN)
-                                .then(function(response) {
-                                    if (!response.ok) {
-                                        throw new Error('Network response was not ok');
-                                    }
-                                    return response.json();
-                                })
-                                .then(function(data) {
-                                    let html = document.getElementById('loginForm');
-                                    let loginContent = '';
-                                    if (userId) {
-                                        loginContent = `<ul><li class="active "><a href="#">${data.customer_name}</a>
-                                            <ul class="dropdown ">
-                                                <li><a href="./pages/userInfor.html?id=${data.id}">Thông tin</a></li>
-                                                <li><a href="#" onclick="logout()">Đăng xuất</a></li>
-                                            </ul>
-                                        </li></ul>`;
-                                    } else {
-                                        loginContent = '<a href="./pages/login.html" style="color: black;">Đăng nhập</a>';
-                                    }
-                                    html.innerHTML = loginContent;
-                                })
-                                .catch(function(error) {
-                                    console.log('Fetch error:', error);
-                                });
-                        }
-                    </script> -->
                 </div>
             </div>
         </div>
@@ -156,29 +120,7 @@
     <!-- Product Section End -->
 
     <!-- Categories Section Begin -->
-    <section class="categories spad" id="saleOff">
-
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="categories__hot__deal">
-                        <img src="./public/img/product/ongiavabienca.jpg" alt="" height="400px">
-                        <div class="hot__deal__sticker">
-                            <span>Sale Of</span>
-                            <h5>89.000đ</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1">
-                    <div class="categories__deal__countdown">
-                        <span>Giảm giá Trong tuần</span>
-                        <h2>Ông Già và biển cả</h2>
-                        <a href="./shop.html" class="primary-btn">Mua ngay</a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </section>
+    <section class="categories spad" id="saleOff"></section>
     <!-- Categories Section End -->
 
     <!-- Instagram Section Begin -->
