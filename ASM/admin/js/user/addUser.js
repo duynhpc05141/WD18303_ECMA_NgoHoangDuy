@@ -54,8 +54,16 @@ dbGet(dbChild(dbRef(db), `user/`))
         dbGet(dbRef(db, 'user'))
         .then((snapshot) => {
           const userList = snapshot.val();
-          const newId = userList ? Object.keys(userList).length + 1 : 1; // Xác định ID mới dựa trên độ dài của danh sách hiện có
-
+          let newId = 0; // Xác định ID mới dựa trên độ dài của danh sách hiện có
+          if (userList) {
+            Object.keys(userList).forEach((key) => {
+              const user = userList[key];
+              if (user.id && user.id > newId) {
+                newId = user.id;
+              }
+            });
+            newId++;
+          }
           // Tạo một đối tượng người dùng mới với ID mới được xác định
           let newUser = {
             id: newId,
