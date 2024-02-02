@@ -118,26 +118,73 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Cập nhật danh mục</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Thêm Hóa đơn</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form >
                                     <div class="col-md-8 position-relative">
-                                      <label for="validationTooltip01" class="form-label">Tên danh mục</label>
-                                      <input type="text" class="form-control" id="nameCate" required>
+                                      <label for="validationTooltip01" class="form-label">Họ tên</label>
+                                      <input type="text" class="form-control" id="name" required>
                                       <div class="valid-tooltip">
                                         Looks good!
                                       </div>
                                     </div>
+                                    <div class="col-md-8 position-relative p-2">
+                                      <label for="validationTooltip02" class="form-label">Sản phẩm</label>
+                                      <input type="text" class="form-control" id="product" required>
+                                      <div class="valid-tooltip">
+                                        Looks good!
+                                      </div>
+                                    </div>
+                                    <div class="col-md-8 position-relative p-2">
+                                        <label for="validationTooltip02" class="form-label">Giá</label>
+                                        <input type="number" class="form-control" id="price" min="0" required>
+                                        <div class="valid-tooltip">
+                                          Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 position-relative p-2">
+                                        <label for="validationTooltip02" class="form-label">Địa chỉ</label>
+                                        <input type="text" class="form-control" id="address" required>
+                                        <div class="valid-tooltip">
+                                          Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 position-relative p-2">
+                                        <label for="validationTooltip02" class="form-label">Ngày</label>
+                                        <input type="date" class="form-control" id="date" required>
+                                        <div class="valid-tooltip">
+                                          Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 position-relative p-2">
+                                        <label for="validationTooltip02" class="form-label">Số lượng</label>
+                                        <input type="number" class="form-control" id="quatily" required>
+                                        <div class="valid-tooltip">
+                                          Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 position-relative mt-4">
+                                      <label for="validationTooltip04" class="form-label">Trạng thái</label>
+                                      <select class="form-select" id="status" required>
+                                        <option value="1">Đã giao</option>
+                                        <option value="2">Đang xử lý</option>
+                                        <option value="3">Đã hủy</option>
+                                      </select>
+                                      <div class="invalid-tooltip">
+                                        Please select a valid state.
+                                      </div>
+                                    </div>
                                     <div class="col-12 mt-4">
-                                      <button class="btn btn-primary" type="submit" id="btnUpCate">Cập nhật</button>
+                                      <button class="btn btn-dark" type="submit" id="btnAddOrder">Thêm</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -177,7 +224,7 @@
     <!-- Page level custom scripts -->
     <script src="../../js/demo/datatables-demo.js"></script>
     <!-- <script src="../../js/user/listUser.js" type="module"></script> -->
-    <script src="../../js/category/index.js" type="module"></script>
+    <script src="../../js/cart/index.js" type="module"></script>
     <!-- <script src="../js/user/updateUser.js" type="module"></script> -->
 
 </body>

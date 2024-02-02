@@ -118,26 +118,32 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Cập nhật danh mục</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Hóa đơn</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form >
-                                    <div class="col-md-8 position-relative">
-                                      <label for="validationTooltip01" class="form-label">Tên danh mục</label>
-                                      <input type="text" class="form-control" id="nameCate" required>
-                                      <div class="valid-tooltip">
-                                        Looks good!
-                                      </div>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                      <button class="btn btn-primary" type="submit" id="btnUpCate">Cập nhật</button>
-                                    </div>
-                                </form>
+                                <div class="mb-2">
+                                    <a class="btn btn-dark" href="./addCart.html">Thêm</a>
+                                </div>
+                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Khách hàng</th>
+                                            <th>Sản phẩm</th>
+                                            <th>Trạng thái</th>
+                                            <th>Ngày</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listCart">
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -148,7 +154,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>NgoDuy &copy; Dybook</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -177,8 +183,7 @@
     <!-- Page level custom scripts -->
     <script src="../../js/demo/datatables-demo.js"></script>
     <!-- <script src="../../js/user/listUser.js" type="module"></script> -->
-    <script src="../../js/category/index.js" type="module"></script>
-    <!-- <script src="../js/user/updateUser.js" type="module"></script> -->
+    <script src="../../js/cart/index.js" type="module"></script>
 
 </body>
 
