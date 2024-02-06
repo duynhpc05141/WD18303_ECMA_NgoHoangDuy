@@ -59,9 +59,24 @@
                 </nav>
             </div>
             <div class="col-lg-3 col-md-3">
-                <div class="header__nav__option">
+                <div class="header__nav__option" >
                     <a href="#" class="search-switch"><img src="./public/img/icon/search.png" alt=""></a>
-                    <a href="./pages/shopping-cart.html"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>
+                    <a id="cart"></a>
+                    <script>
+                        let userId = sessionStorage.getItem('id');
+                        if (userId) {
+                            let html = document.getElementById('cart');
+                            let cart = '';
+                           cart = `<a href="./pages/shopping-cart.html"><img src="./public/img/icon/cart.png" alt=""><span>0</span></a>`;
+                            html.innerHTML = cart;
+                        }else{
+                            let html = document.getElementById('cart');
+                            let cart = '';
+                            cart = `<a href="./pages/login.html"><img src="./public/img/icon/cart.png" alt=""> <span>0</span></a>`;
+                            html.innerHTML = cart;
+                        }
+                    </script>
+                    
                     <a id="loginForm" class="header__menu"></a>
                 </div>
             </div>

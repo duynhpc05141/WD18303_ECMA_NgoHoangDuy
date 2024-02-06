@@ -58,30 +58,25 @@
                 </nav>
             </div>
             <div class="col-lg-3 col-md-3">
-                <div class="header__nav__option">
+                <div class="header__nav__option" >
                     <a href="#" class="search-switch"><img src="../public/img/icon/search.png" alt=""></a>
-                    <a href="#"><img src="../public/img/icon/cart.png" alt=""> <span>0</span></a>
-                    <a id="login" class="header__menu"></a>
+                    <a id="cart"></a>
                     <script>
-                        function logout() {
-                            let logOut = sessionStorage.removeItem('name');
-                            window.location.href = '../index.html';
-                        }
-                        let UserLogin = sessionStorage.getItem('name');
-                        
-                        if (UserLogin) {
-                            let UserLogined = `<ul><li class="active "><a href="#">${UserLogin}</a>
-                                <ul class="dropdown">
-                                    <li><a href="#" onclick="logout()">Đăng xuất</a></li>
-                                </ul>
-                            </li></ul>`;
-                            document.getElementById('login').innerHTML = UserLogined;
-                        } else {
-                            let loginLink = '<a href="../pages/login.html" style="color: black;">Đăng nhập</a>';
-                            document.getElementById('login').innerHTML = loginLink;
+                        let userId = sessionStorage.getItem('id');
+                        if (userId) {
+                            let html = document.getElementById('cart');
+                            let cart = '';
+                           cart = `<a href="../pages/shopping-cart.html"><img src="../public/img/icon/cart.png" alt=""><span>0</span></a>`;
+                            html.innerHTML = cart;
+                        }else{
+                            let html = document.getElementById('cart');
+                            let cart = '';
+                            cart = `<a href="../pages/login.html"><img src="../public/img/icon/cart.png" alt=""> <span>0</span></a>`;
+                            html.innerHTML = cart;
                         }
                     </script>
-                    <!-- <a href="./pages/login.html" style="color: black;">Đăng nhập</a> -->
+                    
+                    <a id="loginForm" class="header__menu"></a>
                 </div>
             </div>
         </div>
@@ -380,6 +375,7 @@
     <script src="../public/js/mixitup.min.js"></script>
     <script src="../public/js/owl.carousel.min.js"></script>
     <script src="../public/js/main.js"></script>
+    <script src="../public/js/loginUser.js" type="module"></script>
 </body>
 
 </html>

@@ -172,6 +172,9 @@ btnLogin.addEventListener('click', (e) => {
                 let role_id = userFound.role_id;
                 sessionStorage.setItem('role_id', role_id);
                 sessionStorage.setItem('id', id);
+                sessionStorage.setItem('address', userFound.customer_address);
+                sessionStorage.setItem('userName', userFound.customer_name);
+                sessionStorage.setItem('userPhone', userFound.customer_phone_number);
                 window.location.href = '../index.html';
             } else {
                 throw new Error('Email hoặc mật khẩu không chính xác');

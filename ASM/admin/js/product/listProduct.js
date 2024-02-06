@@ -30,7 +30,7 @@ dbGet(dbChild(dbRef(db), 'product'))
     snapshot.forEach((childSnapshot) => {
       const product = childSnapshot.val();
       let price = product.product_price;
-        let formattedPrice = price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+      let formattedPrice = price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
       let categoryText = "";
       if (product.cate_id === 0) {
         categoryText = "Tiểu thuyết";

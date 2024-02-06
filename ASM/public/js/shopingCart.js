@@ -1,55 +1,67 @@
 
+import { firebaseConfig } from "../../firebase.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 
-// Hàm để thêm sản phẩm vào giỏ hàng
-function addToCart(product) {
-    let cart = getCartFromLocalStorage(); // Lấy thông tin giỏ hàng từ localStorage
-    cart.push(product); // Thêm sản phẩm vào giỏ hàng
-    saveCartToLocalStorage(cart); // Lưu thông tin giỏ hàng vào localStorage
-  }
-  
-  // Hàm để lưu thông tin giỏ hàng vào localStorage
-  function saveCartToLocalStorage(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
-  
-  // Hàm để lấy thông tin giỏ hàng từ localStorage
-  function getCartFromLocalStorage() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
-  }
-  
-  let idSp = localStorage.getItem('idProduct');
-  const API_PRODUCT_CART = 'http://localhost:3000/product/' + idSp;
-  console.log(API_PRODUCT_CART);
-  
-  fetch(API_PRODUCT_CART)
-    .then(function(response) {
-      return response.json();
+import {
+  getDatabase as getDb,
+  ref as dbRef,
+  set as dbSet,
+  get as dbGet,
+  child as dbChild,
+  push,
+  orderByChild,
+  equalTo,
+  remove as dbRemove,
+  update as dbUpdate,
+} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+const app = initializeApp(firebaseConfig);
+const db = getDb(app);
+let userName = sessionStorage.getItem('userName');
+dbGet(dbChild(dbRef(db), `orders`))
+    .then((snapshot) => {
+        const orders = snapshot.val();
+        let html = document.getElementById('show-Cart');
+        let cart = '';
+        snapshot.forEach( (childSnapshot) => {
+            const orders = childSnapshot.val();
+            if (userName == orders.customer_name) {
+                let price = orders.product_price;
+                let quantity = localStorage.getItem('quantity') || 1; // Giả sử quantity là 1, bạn có thể cập nhật giá trị này từ người dùng
+                let total = quantity * price; // Tính toán tổng tiền
+                let formattedPrice = price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                let formattedTotal = total.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                cart += `<tr>
+                <td class="product__cart__item">
+                    <div class="product__cart__item__text">
+                        <h5>${orders.product_name}</h5>
+                        <h5 style="color:red">${formattedPrice}</h5>
+                    </div>
+                </td>
+                <td class="quantity__item">
+                    <div class="quantity">
+                        <div class="pro-qty-2">
+                            <input type="number" value="${quantity}" min="1">
+                        </div>
+                    </div>
+                </td>
+                <td class="cart__price">${formattedTotal}</td>
+                <td class="cart__close"><button class="btn-delete" order-id="${childSnapshot.key}">Xóa</button></td>
+                </tr>`;
+                html.innerHTML += cart;
+                document.querySelectorAll('.btn-delete').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                      e.preventDefault();
+                      let ordersId  = e.target.getAttribute('order-id');
+                      if (confirm("Bạn có chắc chắn muốn xóa hóa đơn này không?")) {
+                        dbRemove(dbChild(dbRef(db), 'orders/' + ordersId));
+                        window.location.href = '../../pages/shopping-cart.html';
+                      }
+                    });
+                });
+            }
+        });
     })
-    .then(function(data) {
-    let price = data.product_price;
-    let quantity = 1; // Giả sử quantity là 1, bạn có thể cập nhật giá trị này từ người dùng
-    let total = quantity * price; // Tính toán tổng tiền
-    let html = document.getElementById('show-Cart');   
-    let cart = '';
-    let formattedPrice = price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-    cart += `<tr>
-        <td class="product__cart__item">
-            <div class="product__cart__item__text">
-                <h5>${data.product_name}</h5>
-                <h5 style="color:red">${formattedPrice}</h5>
-            </div>
-        </td>
-        <td class="quantity__item">
-            <div class="quantity">
-                <div class="pro-qty-2">
-                    <input type="number" value="${quantity}" min="1">
-                </div>
-            </div>
-        </td>
-        <td class="cart__price">${total}</td>
-        <td class="cart__close"><i class="fa fa-close"></i></td>
-        </tr>
-        <button class="primary-btn">Thanh toán</button>`;
-    html.innerHTML += cart; 
+    .catch((error) => {
+        console.error(error);
     });
-  
+
